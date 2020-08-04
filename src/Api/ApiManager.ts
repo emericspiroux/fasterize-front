@@ -26,8 +26,10 @@ class ApiManager {
      * @param isDown true if Api is down
      */
     setServerDown(isDown:boolean) {
-        if (this.store)
+        if (this.store) {
             CustomRedux.actions.api.setIsDown(this.store.dispatch, isDown)
+            CustomRedux.actions.popup.addMessage(this.store.dispatch, "Oooops ! Server is down.")
+        }
     }
     
     /**
@@ -35,8 +37,10 @@ class ApiManager {
      * @param isTimeout true if internet connection is down
      */
     setServerTimeout(isTimeout:boolean) {
-        if (this.store)
+        if (this.store) {
             CustomRedux.actions.api.setIsTimeout(this.store.dispatch, isTimeout)
+            CustomRedux.actions.popup.addMessage(this.store.dispatch, "No internet connection. Please check your internet connection and retry.")
+        }
     }
 
     // redux dispatch getter 

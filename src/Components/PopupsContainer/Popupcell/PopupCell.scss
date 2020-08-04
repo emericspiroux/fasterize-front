@@ -1,0 +1,39 @@
+@import '../../../StyledModules/color.scss';
+
+.PopupCell {
+  width: 100%;
+  max-width: calc(200px - 32px);
+  padding: 16px;
+  font-size: 14px;
+  color: $red;
+  box-sizing: border-box;
+  background-color: $red-light;
+  border: 1px solid $red;
+  border-radius: 4px;
+  pointer-events: all;
+  text-align: center;
+  animation: onAppear 300ms 1 ease-in;
+  transition: max-width 500ms;
+  @media screen and (max-width:600px){
+    max-width: 100% 
+  }
+}
+
+.PopupCell__close {
+ cursor: pointer;
+ color: $grey-dark;
+ font-size: 12px;
+ margin-top: 8px;
+ &:hover {
+   color: $blue;
+ }
+}
+
+@keyframes onAppear {
+  from {
+    transform: translate(0, 400%);
+  }
+  to {
+    transform: translate(0);
+  }
+}

@@ -8,6 +8,7 @@ import PageContainer from './Components/PageContainer/PageContainer';
 import ContentArea from './Components/ContentArea/ContentArea';
 import DebugComponent from './Components/DebugComponent/DebugComponent';
 import DebugHistory from './Components/DebugHistory/DebugHistory';
+import PopupsContainer from './Components/PopupsContainer/PopupsContainer';
 
 // Home Page app
 function App() {
@@ -25,6 +26,7 @@ function App() {
           <DebugHistory />
         </PageContainer>
       </SideBarContent>
+      <PopupsContainer />
     </div>
   );
 }
