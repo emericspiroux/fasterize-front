@@ -64,7 +64,7 @@ function DebugHistoryCell(props:IDebugHistoryCellProps) {
         <span className="DebugHistoryCell__cfStatus__element error">No cloud front status</span>
       )
     return (
-      <div className={`DebugHistoryCell__cfStatus__element ${status === "MISS" ? "error" : ""}`}>{status}</div>
+      <div className={`DebugHistoryCell__cfStatus__element ${status === "MISS" || status === "ERROR" ? "error" : ""}`}>{status}</div>
     )
   }
 
