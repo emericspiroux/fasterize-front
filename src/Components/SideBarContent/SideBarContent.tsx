@@ -5,7 +5,7 @@ import './SideBarContent.scss'
 
 import FasterizeLogo from '../../Pictures/Logos/fasterize.png'
 
-interface SideBarContentProps {
+interface ISideBarContentProps {
   children: React.ReactNode
 }
 
@@ -13,7 +13,7 @@ interface SideBarContentProps {
  * Composed of 2 parts. first at the right of the page : sideBar with logo and at the left children inside the component.
  * The right side will by hidden smoothly above 600px window width.
  */
-function SideBarContent(props:SideBarContentProps) {
+function SideBarContent(props:ISideBarContentProps) {
   return (
     <div className="SideBarContent">
       <div className="SideBarContent__sideBar">

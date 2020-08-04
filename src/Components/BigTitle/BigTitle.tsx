@@ -3,13 +3,13 @@ import PropTypes from 'prop-types'
 
 import './BigTitle.scss'
 
-interface BigTitleProps {
+interface IBigTitleProps {
   children: React.ReactNode,
   className?: string
 }
 
 // Content title with cyan square and a text
-function BigTitle(props:BigTitleProps) {
+function BigTitle(props:IBigTitleProps) {
   return (
     <div className={`BigTitle ${props.className}`}>
       <div className="BigTitle__square" />

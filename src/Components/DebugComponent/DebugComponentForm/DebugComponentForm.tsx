@@ -5,7 +5,7 @@ import './DebugComponentForm.scss'
 import FormCheck from '../../../Helpers/FormCheck/FormCheck'
 import FormCheckEnum from '../../../Helpers/FormCheck/FormCheckEnum'
 
-interface DebugComponentFormProps {
+interface IDebugComponentFormProps {
   className?: string,
   onSubmit(inputs:IDebugComponentFormInputs):void
 }
@@ -16,7 +16,7 @@ interface DebugComponentFormProps {
  * Return IDebugComponentFormInputs on onSubmit when user click on button.
  * onSubmit is not triggered if error is detected.
  */
-function DebugComponentForm(props:DebugComponentFormProps) {
+function DebugComponentForm(props:IDebugComponentFormProps) {
   const [hasError, setHasError] = useState(false)
   const [errorText, _setErrorText] = useState("")
   let urlInput = useRef<HTMLInputElement | null>(null)

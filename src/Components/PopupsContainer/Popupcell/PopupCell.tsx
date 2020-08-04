@@ -6,7 +6,7 @@ import './PopupCell.scss'
 
 import CustomRedux from '../../../Redux'
 
-interface PopupCellProps {
+interface IPopupCellProps {
   message:string,
   deleteMessage():void
 }
@@ -14,7 +14,7 @@ interface PopupCellProps {
 /**
  * Popup can contain a message.
  */
-function PopupCell(props:PopupCellProps) {
+function PopupCell(props:IPopupCellProps) {
 
   return (
     <div className="PopupCell s-top">
@@ -33,4 +33,4 @@ const actions = (dispatch:Dispatch) => ({
 })
 
 
-export default connect(null, actions)(PopupCell as any as React.ComponentType<PopupCellProps>)
+export default connect(null, actions)(PopupCell as any as React.ComponentType<IPopupCellProps>)

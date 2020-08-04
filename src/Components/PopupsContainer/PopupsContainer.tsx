@@ -5,14 +5,14 @@ import './PopupsContainer.scss'
 
 import PopupCell from './Popupcell/PopupCell'
 
-interface PopupsContainerProps {
+interface IPopupsContainerProps {
   message:string | undefined
 }
 
 /**
  * Container to display notifications popup
  */
-function PopupsContainer(props:PopupsContainerProps) {
+function PopupsContainer(props:IPopupsContainerProps) {
   return (
     <div className="PopupsContainer">
         {props.message && (
@@ -26,4 +26,4 @@ const reducer = (state:any) => ({
   message: state.popup && state.popup.message
 })
 
-export default connect(reducer)(PopupsContainer as any as React.ComponentType<PopupsContainerProps>)
+export default connect(reducer)(PopupsContainer as any as React.ComponentType<IPopupsContainerProps>)

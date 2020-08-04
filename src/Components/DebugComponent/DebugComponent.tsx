@@ -9,7 +9,7 @@ import DebugComponentForm from './DebugComponentForm/DebugComponentForm'
 import IDebugComponentFormInputs from './DebugComponentForm/IDebugComponentFormInputs'
 import IDebugHistoryElement from '../DebugHistory/IDebugHistoryElement'
 
-interface DebugComponentProps {
+interface IDebugComponentProps {
   className?: string,
   addElement(element:IDebugHistoryElement):void
 }
@@ -18,7 +18,7 @@ interface DebugComponentProps {
 /**
  * DebugComponent is used to display form. This form will add an element to history.
  */
-function DebugComponent(props:DebugComponentProps) {
+function DebugComponent(props:IDebugComponentProps) {
 
   function onSubmit(inputs:IDebugComponentFormInputs) {
     props.addElement({
@@ -50,4 +50,4 @@ const actionsToProps = (dispatch:Dispatch) => ({
   addElement: ReduxComponent.actions.history.addElement.bind(null, dispatch)
 })
 
-export default connect(null, actionsToProps)(DebugComponent as any as FunctionComponent<DebugComponentProps>)
+export default connect(null, actionsToProps)(DebugComponent as any as FunctionComponent<IDebugComponentProps>)

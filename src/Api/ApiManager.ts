@@ -3,7 +3,7 @@ import packageJSON from '../../package.json';
 import CustomRedux from '../Redux'
 import {Store} from 'redux'
 import MethodEnum from './bin/MethodEnum';
-import ApiCanceler from './bin/ApiCanceler';
+import IApiCanceler from './bin/IApiCanceler';
 
 class ApiManager {
     // baseUrl of the API
@@ -63,9 +63,9 @@ class ApiManager {
      * Permit to request something to Api
      * @param method `MethodEnum` enumerator who describe HTTP method.
      * @param url Route path on `BaseUrl`. exemple : "/myroute?param1=toto"
-     * @param cancelService `ApiCanceler` is a callback who returning a function to cancel current request
+     * @param cancelService `IApiCanceler` is a callback who returning a function to cancel current request
      */
-    static requester<T>(method:MethodEnum, url:string, cancelService:ApiCanceler):Promise<AxiosResponse<T>>{
+    static requester<T>(method:MethodEnum, url:string, cancelService:IApiCanceler):Promise<AxiosResponse<T>>{
         return new Promise(async (success, fail) => {
             var config:AxiosRequestConfig = {
                 baseURL: ApiManager.baseUrl,

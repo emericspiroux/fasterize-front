@@ -12,7 +12,7 @@ import DebugManager from '../../../Api/Managers/DebugManager/index'
 import CustomRedux from '../../../Redux'
 
 import IDebugHistoryElement from '../IDebugHistoryElement'
-import ApiCanceler from '../../../Api/bin/ApiCanceler'
+import IApiCanceler from '../../../Api/bin/IApiCanceler'
 
 import LoadingSpinner from '../../LoadingSpinner/LoadingSpinner'
 
@@ -74,7 +74,7 @@ function DebugHistoryCell(props:IDebugHistoryCellProps) {
    * @param element `IDebugHistoryElement`, must have valid url.
    * @param canceler Cancel callback who give Axios canceler in parameters.
    */
-  async function fetchInformations(index:number, element:IDebugHistoryElement, canceler:ApiCanceler = (() => {})) {
+  async function fetchInformations(index:number, element:IDebugHistoryElement, canceler:IApiCanceler = (() => {})) {
     element.isLoading = true
     props.updateElement(index, element)
     try {

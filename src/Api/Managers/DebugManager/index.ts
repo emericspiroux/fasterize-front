@@ -1,7 +1,7 @@
 import {AxiosResponse} from 'axios'
 
 import ApiManager from '../../ApiManager'
-import ApiCanceler from '../../bin/ApiCanceler';
+import IApiCanceler from '../../bin/IApiCanceler';
 import MethodEnum from '../../bin/MethodEnum';
 import IDebugHistoryInformations from './bin/IDebugHistoryInformations';
 
@@ -14,7 +14,7 @@ class DebugManager {
    * @param url Url who we wnat informations
    * @param canceler Callback who give a request canceler function
    */
-  static getInformationsAbout(url:string, canceler:ApiCanceler):Promise<AxiosResponse<IDebugHistoryInformations>>{
+  static getInformationsAbout(url:string, canceler:IApiCanceler):Promise<AxiosResponse<IDebugHistoryInformations>>{
     return ApiManager.requester<IDebugHistoryInformations>(MethodEnum.get, `/?url=${encodeURI(url)}`, canceler)
   }
 }

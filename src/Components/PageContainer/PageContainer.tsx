@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import './PageContainer.scss'
 
-interface PageContainerProps {
+interface IPageContainerProps {
   children: React.ReactNode
 }
 
@@ -12,7 +12,7 @@ interface PageContainerProps {
  * This technical choice allow browser to scroll if content is too long, 
  * while maintaining `TitleHeader` at the top of the page.
  */
-function PageContainer(props:PageContainerProps) {
+function PageContainer(props:IPageContainerProps) {
   return (
     <div className="PageContainer">
         {props.children}

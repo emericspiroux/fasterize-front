@@ -3,13 +3,13 @@ import PropTypes from 'prop-types'
 
 import './ContentArea.scss'
 
-interface ContentAreaProps {
+interface IContentAreaProps {
   children: React.ReactNode,
   className?: string
 }
 
 // Content area with background color white.
-function ContentArea(props:ContentAreaProps) {
+function ContentArea(props:IContentAreaProps) {
   return (
     <div className={`ContentArea ${props.className}`}>
       {props.children}
