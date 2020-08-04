@@ -1,0 +1,23 @@
+@import '../../StyledModules/color.scss';
+
+.BigTitle {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  padding: 6px;
+}
+
+.BigTitle__square {
+  $size: 30px;
+  width: $size;
+  height: $size;
+  background-color: $cyan;
+  border-radius: 3px;
+}
+
+.BigTitle__title {
+  flex-grow: 1;
+  color: rgba(0,0,0,0.5);
+  margin-left: 10px;
+  font-size: 15px;
+}

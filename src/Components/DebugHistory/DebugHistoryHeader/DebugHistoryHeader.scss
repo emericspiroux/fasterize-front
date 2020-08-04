@@ -1,0 +1,21 @@
+@import '../../../StyledModules/color.scss';
+
+$fullsize: 100%;
+
+.DebugHistoryHeader {
+  color: $grey-dark;
+  font-size: 14px;
+  padding: 18px 25px;
+  padding-bottom: 0;
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(6, $fullsize / 6);
+  grid-column-gap: 6px;
+  @media screen and (max-width: 1040px){
+    display: none;
+  }
+}
+
+.DebugHistoryHeader__date {
+  text-align: center;
+}

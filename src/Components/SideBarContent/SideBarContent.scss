@@ -1,0 +1,40 @@
+@import '../../StyledModules/color.scss';
+
+.SideBarContent {
+  display: flex;
+  height: 100%;
+}
+
+.SideBarContent__sideBar {
+  width: 100%;
+  max-width: 200px;
+  height: 100%;
+  background: radial-gradient(circle, #6B7DEA 100%, #3C52C9 0%);
+  box-shadow: inset -3px 0 6px 0 rgba(0,0,0,0.1);
+  transition: max-width 500ms;
+  overflow: hidden;
+  @media screen and (max-width: 600px){
+    max-width: 0px;
+  }
+}
+
+.SideBarContent__sideBar__brand {
+  display: flex;
+  align-items: center;
+  padding: 20px 14px;
+}
+
+.SideBarContent__sideBar__brand__logo {
+  width: 38px;
+}
+
+.SideBarContent__sideBar__brand__name {
+  margin-left: 12px;
+  color: white;
+  font-weight: 600;
+  font-size: 19px;
+}
+
+.SideBarContent__content {
+  flex-grow: 1;
+}

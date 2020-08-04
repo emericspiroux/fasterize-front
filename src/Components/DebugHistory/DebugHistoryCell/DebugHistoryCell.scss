@@ -1,0 +1,85 @@
+@import '../../../StyledModules/color.scss';
+
+$fullsize: 100%;
+
+.DebugHistoryCell {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(6, $fullsize / 6);
+  grid-column-gap: 6px;
+  .DebugHistoryCell__mobile__title {
+    display: none;
+  }
+  @media screen and (max-width: 1040px){
+    display: flex;
+    flex-direction: column;
+    .DebugHistoryCell__mobile__title {
+      display: inline-block;
+      margin-right: 4px;
+    }
+    .DebugHistoryCell__column {
+      margin-bottom: 8px;
+    }
+  }
+}
+
+.DebugHistoryCell__mobile__title {
+  color: $grey-dark;
+  font-size: 14px;
+  text-decoration: underline;
+}
+
+.DebugHistoryCell__date, .DebugHistoryCell__url {
+  color: $grey-dark;
+  font-size: 14px;
+  word-break: break-word;
+}
+
+.DebugHistoryCell__date {
+  text-align: center;
+}
+
+.DebugHistoryCell__status__icon {
+  height: auto;
+  transform: scale(-1, 1);
+  &.plugged {
+    color: $green;
+  }
+  &.halfplugged {
+    color: $green;
+  }
+  &.unplugged {
+    color: $red;
+  }
+}
+
+.DebugHistoryCell__status__error {
+  color: $red;
+  font-size: 12px;
+}
+
+.DebugHistoryCell__flags__element {
+  background-color: $blue-xtra-dark;
+  color: white;
+  display: inline-block;
+  margin-right:4px; 
+  margin-top: 2px;
+  font-size: 14px;
+  text-align: center;
+  &.error {
+    background-color: $red;
+  }
+}
+
+.DebugHistoryCell__cfStatus__element {
+  background-color: $green;
+  color: white;
+  display: inline-block;
+  padding: 4px 6px;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 14px;
+  &.error {
+    background-color: $red;
+  }
+}

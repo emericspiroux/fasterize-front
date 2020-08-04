@@ -1,0 +1,23 @@
+@import '../../StyledModules/color.scss';
+
+.LoadingSpinner {
+  $size: 20px;
+  $borderWidth: 5px;
+  width: $size;
+  height: $size;
+  border: $borderWidth solid $grey;
+  border-radius: 50%;
+  border-left: $borderWidth solid $blue;
+  animation: looping 500ms infinite linear;
+}
+
+@keyframes looping {
+  from {
+    transform: rotate(0deg);
+    border-left-color: $blue;
+  }
+  to {
+    border-left-color: $green;
+    transform: rotate(360deg)
+  }
+}

@@ -1,0 +1,18 @@
+@import '../../../StyledModules/color.scss';
+
+.DebugComponentForm {}
+
+.DebugComponentForm__form {}
+
+.DebugComponentForm__form__wrapper {
+  display: flex;
+}
+
+.DebugComponentForm__form__wrapper__urlInput {
+  width: 100%;
+  max-width: 350px;
+}
+
+.DebugComponentForm__form__wrapper__button {
+  margin-left: 12px;
+}
